@@ -1,0 +1,17 @@
+.input-block {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: var(--gap-md) var(--gap-lg);
+  color: var(--very-dark-gray);
+  border: none;
+  border-radius: 0.9375rem 0 0 0.9375rem;
+  -webkit-border-radius: 0.9375rem 0 0 0.9375rem;
+  -moz-border-radius: 0.9375rem 0 0 0.9375rem;
+  -ms-border-radius: 0.9375rem 0 0 0.9375rem;
+  -o-border-radius: 0.9375rem 0 0 0.9375rem;
+}
