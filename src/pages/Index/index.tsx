@@ -3,15 +3,21 @@ import React from "react";
 import Input from "./../../components/Input";
 // imgs
 import arrowIcon from "../../assets/images/icon-arrow.svg";
+// styles
+import "./styles.css";
 
 const Index = () => {
   return (
     <main className="ip-tracker">
       <div className="ip-tracker-container container">
-        <h1 className="ip-tracker-title">Ip Address Tracker</h1>
+        <h1 className="ip-tracker-title">IP Address Tracker</h1>
 
         <form className="ip-tracker-form">
-          <Input name="ip-adress" onChange={() => {}} />
+          <Input
+            name="ip-adress"
+            onChange={() => {}}
+            placeholder="Search for any IP address or domain"
+          />
           <button className="ip-tracker-submit">
             <img
               src={arrowIcon}
