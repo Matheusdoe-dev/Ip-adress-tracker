@@ -6,7 +6,7 @@
   --gap-xl: 4rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   :root {
     --gap: 0.5rem;
     --gap-sm: 1rem;
