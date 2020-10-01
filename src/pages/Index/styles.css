@@ -78,9 +78,45 @@
 }
 
 .ip-tracker-dashboard-info span {
+  display: inline-block;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--dark-gray);
   font-size: 0.75rem;
+  letter-spacing: 0.6px;
   margin-bottom: var(--gap-sm);
+}
+
+@media (min-width: 960px) {
+  .ip-tracker {
+    padding-top: var(--gap-md);
+    height: 45vh;
+  }
+
+  .ip-tracker-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .ip-tracker-title {
+    margin-bottom: var(--gap-md);
+  }
+
+  .ip-tracker-form {
+    width: 70%;
+    grid-template-columns: 9fr 1fr;
+  }
+
+  .ip-tracker-dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--gap-sm) * 1.5);
+    text-align: left;
+    top: 222px;
+  }
+
+  .ip-tracker-dashboard-info span {
+    margin-bottom: var(--gap-sm);
+  }
 }
