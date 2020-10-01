@@ -5,18 +5,31 @@ import Input from "./../../components/Input";
 import arrowIcon from "../../assets/images/icon-arrow.svg";
 // styles
 import "./styles.css";
+// hooks
+import useIpTracker from "../../hooks/ip-tracker";
 
 const Index = () => {
+  const {
+    ip,
+    setIp,
+    handleSubmitIp,
+    ipAdress,
+    isp,
+    location,
+    timezone,
+  } = useIpTracker();
+
   return (
     <main className="ip-tracker">
       <div className="ip-tracker-container container">
         <h1 className="ip-tracker-title">IP Address Tracker</h1>
 
-        <form className="ip-tracker-form">
+        <form className="ip-tracker-form" onSubmit={handleSubmitIp}>
           <Input
             name="ip-adress"
-            onChange={() => {}}
             placeholder="Search for any IP address or domain"
+            value={ip}
+            onChange={(e) => setIp(e.target.value)}
           />
           <button className="ip-tracker-submit">
             <img
@@ -30,22 +43,22 @@ const Index = () => {
         <section className="ip-tracker-dashboard">
           <div className="ip-tracker-dashboard-info">
             <span>Ip Address</span>
-            <h3>192.212.174.101</h3>
+            <h3>{ipAdress}</h3>
           </div>
 
           <div className="ip-tracker-dashboard-info">
             <span>Location</span>
-            <h3>Brooklyn, NY 100001</h3>
+            <h3>{location}</h3>
           </div>
 
           <div className="ip-tracker-dashboard-info">
             <span>Timezone</span>
-            <h3>UTC - 05:00</h3>
+            <h3>{timezone}</h3>
           </div>
 
           <div className="ip-tracker-dashboard-info">
             <span>ISP</span>
-            <h3>SpaceX Starlink</h3>
+            <h3>{isp}</h3>
           </div>
         </section>
       </div>
