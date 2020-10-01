@@ -15,3 +15,14 @@
   -ms-border-radius: 0.9375rem 0 0 0.9375rem;
   -o-border-radius: 0.9375rem 0 0 0.9375rem;
 }
+
+.input:focus {
+  outline: 1px solid var(--dark-gray);
+  -moz-outline-radius: 0.9375rem 0 0 0.9375rem;
+}
+
+@media (min-width: 960px) {
+  .input {
+    padding: calc(var(--gap-sm) * 1.5) var(--gap-md);
+  }
+}
