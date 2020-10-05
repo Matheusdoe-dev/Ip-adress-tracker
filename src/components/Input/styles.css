@@ -21,6 +21,11 @@
   -moz-outline-radius: 0.9375rem 0 0 0.9375rem;
 }
 
+.input.error {
+  outline: 2px solid red;
+  -moz-outline-radius: 0.9375rem 0 0 0.9375rem;
+}
+
 @media (min-width: 960px) {
   .input {
     padding: calc(var(--gap-sm) * 1.5) var(--gap-md);
