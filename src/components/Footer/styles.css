@@ -1,0 +1,50 @@
+.footer {
+  background-color: white;
+}
+
+.footer-container {
+  padding: var(--gap-xl) 0;
+
+  display: flex;
+  place-content: center;
+}
+
+.copy {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0 auto;
+}
+
+.copy a {
+  color: var(--dark-gray);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.matheusdoe-dev {
+  color: #811662 !important;
+}
+
+.copy a:hover {
+  transition: 0.2s;
+  filter: brightness(65%);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-filter: brightness(65%);
+}
+
+@media (min-width: 600px) {
+  .footer-container {
+    padding: var(--gap-lg) 0;
+  }
+
+  .copy {
+    max-width: 100%;
+    font-size: 0.875rem;
+  }
+}
