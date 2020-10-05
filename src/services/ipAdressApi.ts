@@ -1,7 +1,8 @@
 import axios from "axios";
 
+// ip adress tracker api
 const ipAdressApi = axios.create({
-  baseURL: `https://geo.ipify.org/api/v1?apiKey=at_6ttJWVAtb3CMx5RvYZHb9y8eCEW77&ipAddress=`,
+  baseURL: `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}&ipAddress=`,
 });
 
 export default ipAdressApi;
