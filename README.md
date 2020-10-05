@@ -1,4 +1,4 @@
-# Fylo
+# Ip Address Tracker
 
 > A ip address tracker web application. It's a Frontend Mentor challenge
 
