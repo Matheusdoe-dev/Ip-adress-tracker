@@ -1,9 +1,9 @@
-import { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 // apis
 import ipAdressApi from "../services/ipAdressApi";
 
 const useIpTracker = () => {
-  // ip that will be tracker
+  // It's the ip that will be tracker
   const [ip, setIp] = useState("");
 
   // dashboard data
@@ -12,6 +12,12 @@ const useIpTracker = () => {
   const [timezone, setTimezone] = useState("");
   const [isp, setISP] = useState("");
 
+  // location
+  const [position, setPosition] = useState<[number, number]>([0, 0]);
+
+  // erros
+  const [ipErrorStatus, setIpErrorStatus] = useState(false);
+
   // tracking the ip adress
   const handleSubmitIp = async (e: FormEvent) => {
     e.preventDefault();
@@ -19,9 +25,8 @@ const useIpTracker = () => {
       .get(`&ipAddress=${ip}`)
       .then((r) => r.data)
       .catch((err) => {
-        alert(
-          "It wasn't possible to find this ip, check your input and try again"
-        );
+        setIpErrorStatus(true);
+        alert("Invalid ip, try again");
       });
 
     // It's putting all keys information on states
@@ -32,21 +37,44 @@ const useIpTracker = () => {
       );
       setTimezone(`UTC ${data.location.timezone}`);
       setISP(data.isp);
+      setPosition([data.location.lat, data.location.lng]);
     }
   };
 
-  useEffect(async () => {
-    const data = await ipAdressApi.get(``).then((r) => r.data);
+  useEffect(() => {
+    const handleData = async () => {
+      // request without a ip, the api will return data based on the user ip address
+      const data = await ipAdressApi
+        .get(``)
+        .then((r) => r.data)
+        .catch((err) => {
+          console.log(err);
+        });
 
-    if (data) {
-      setIpAdress(data.ip);
-      setLocation(
-        `${data.location.region}, ${data.location.country} ${data.location.postalCode}`
-      );
-      setTimezone(`UTC ${data.location.timezone}`);
-      setISP(data.isp);
-    }
+      // if data is valid
+      if (data) {
+        setIpAdress(data.ip);
+        setLocation(
+          `${data.location.region}, ${data.location.country} ${data.location.postalCode}`
+        );
+        setTimezone(`UTC ${data.location.timezone}`);
+        setISP(data.isp);
+        setPosition([data.location.lat, data.location.lng]);
+      }
+    };
+
+    handleData();
   }, []);
+
+  useEffect(() => {
+    if (ipErrorStatus) {
+      document.querySelector('input[name="ip-adress"]')?.classList.add("error");
+    } else {
+      document
+        .querySelector('input[name="ip-adress"]')
+        ?.classList.remove("error");
+    }
+  }, [ipErrorStatus]);
 
   return {
     ip,
@@ -56,6 +84,8 @@ const useIpTracker = () => {
     location,
     isp,
     timezone,
+    position,
+    setIpErrorStatus,
   };
 };
 
