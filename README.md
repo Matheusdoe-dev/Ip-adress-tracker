@@ -1,44 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Fylo
 
-## Available Scripts
+> A ip address tracker web application. It's a Frontend Mentor challenge
 
-In the project directory, you can run:
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-### `yarn start`
+## Get Started
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<ul>
+    <li>You will have to sign up on <a href="https://www.ipify.org/">Ipify</a> to get a <strong>API KEY</strong> and then set it as environment variable</li>
+    <li>If the application is running before set the API KEY environment variable, you will have to restart the application</li>
+    <li>More information about environment variables on React, check out on this <a href="https://create-react-app.dev/docs/adding-custom-environment-variables/">link</a></li>
+</ul>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+.env example:
 
-### `yarn test`
+```sh
+REACT_APP_IPIFY_API_KEY=put your api key here
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Development:
 
-### `yarn build`
+```sh
+npm start
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+yarn start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Build:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm run build
 
-### `yarn eject`
+yarn build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## About
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<ul>
+    <li>A ip address tracker web application;</li>
+    <li>It's a <a href="https://www.frontendmentor.io">Frontend Mentor</a> challenge</li>
+    <li>Made with TypeScript, React.js, CSS, Leaflet, React-Leaflet, Axios and Ipify api</li>
+    <li>This application ideia is to track a ip, input by user, and show key information on UI about location, the ip address itself, timezone and isp, and to show the location on the UI with Leaflet map frame</li>
+</ul>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Technologies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<ul>
+<li><a href="https://reactjs.org/">React.js</a></li>
+<li><a href="https://leafletjs.com/">Leaflet</a></li>
+<li><a href="https://react-leaflet.js.org/">React-Leaflet</a></li>
+<li><a href="https://www.ipify.org/">Ipify</a></li>
+<li><a href="https://github.com/axios/axios">Axios</a></li>
+</ul>
 
-## Learn More
+## Meta
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Author: Matheus do É Santos – [Linkedin](https://www.linkedin.com/in/matheusdoe-dev/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
