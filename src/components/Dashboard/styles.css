@@ -1,0 +1,42 @@
+.ip-tracker-dashboard {
+  background: white;
+  width: 85%;
+  border-radius: 0.9375rem;
+  -webkit-border-radius: 0.9375rem;
+  -moz-border-radius: 0.9375rem;
+  -ms-border-radius: 0.9375rem;
+  -o-border-radius: 0.9375rem;
+  padding: var(--gap-lg);
+
+  position: absolute;
+  top: 190px;
+  z-index: 999;
+}
+
+.ip-tracker-dashboard-info {
+  margin-bottom: 1.5rem;
+}
+
+.ip-tracker-dashboard-info span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--dark-gray);
+  font-size: 0.75rem;
+  letter-spacing: 0.6px;
+  margin-bottom: var(--gap-sm);
+}
+
+@media (min-width: 960px) {
+  .ip-tracker-dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--gap-sm) * 1.5);
+    text-align: left;
+    top: 222px;
+  }
+
+  .ip-tracker-dashboard-info span {
+    margin-bottom: var(--gap-sm);
+  }
+}
