@@ -7,6 +7,7 @@ import "./styles/settings/gaps.css";
 import "./styles/generic/reset.css";
 import "./styles/base/elements.css";
 import "./styles/objects/container.css";
+import "leaflet/dist/leaflet.css";
 
 const App = () => {
   return <Routes />;
