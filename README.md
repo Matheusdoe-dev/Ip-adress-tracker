@@ -71,9 +71,9 @@ Author: Matheus do É Santos – [Linkedin](https://www.linkedin.com/in/matheusd
 
 <!-- Markdown link & img dfn's -->
 
-[top-languages]: https://img.shields.io/github/languages/top/Matheusdoe-dev/Ecoleta?style=flat-square
-[repo-size]: https://img.shields.io/github/repo-size/Matheusdoe-dev/Ecoleta?style=flat-square
-[repo-license]: https://img.shields.io/github/license/Matheusdoe-dev/Ecoleta?style=flat-square
-[repo-version]: https://img.shields.io/github/package-json/v/Matheusdoe-dev/Ecoleta?style=flat-square
+[top-languages]: https://img.shields.io/github/languages/top/Matheusdoe-dev/Ip-adress-tracker?style=flat-square
+[repo-size]: https://img.shields.io/github/repo-size/Matheusdoe-dev/Ip-adress-tracker?style=flat-square
+[repo-license]: https://img.shields.io/github/license/Matheusdoe-dev/Ip-adress-tracker?style=flat-square
+[repo-version]: https://img.shields.io/github/package-json/v/Matheusdoe-dev/Ip-adress-tracker?style=flat-square
 [matheus-img]: https://img.shields.io/badge/-matheusdoe.dev-%23811662?style=flat-square
 [matheus-url]: https://matheusdoe.dev
